@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BlinkdotNet.Net.Entities
 {
-    public class Syncmodule
+    internal class Syncmodule
     {
         public Module syncmodule{ get; set; }
     }

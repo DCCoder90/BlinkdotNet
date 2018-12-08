@@ -9,14 +9,14 @@ namespace BlinkdotNet
 {
     public interface IBlinkApiClient
     {
-        Task<NetworkDetails> GetNetworks();
-        Task<Syncmodule> GetSyncModule(int networkId);
+        Task<IEnumerable<NetworkDetail>> GetNetworks();
+        Task<Module> GetSyncModule(int networkId);
         Task<HomeScreen> GetHomeScreen();
-        Task<EventCollection> GetEvents(int networkId);
+        Task<IEnumerable<Event>> GetEvents(int networkId);
         Task<CommandInformation> CaptureThumbnail(int networkId, int cameraId);
         Task<CommandInformation> CaptureClip(int networkId, int cameraId);
-        Task<CameraCollection> GetCameras(int networkId);
-        Task<CameraDetails> GetCameraDetails(int networkId, int cameraId);
+        Task<IEnumerable<Camera>> GetCameras(int networkId);
+        Task<Camera> GetCameraById(int networkId, int cameraId);
         Task<SensorInformation> GetCameraSensorDetails(int networkId, int cameraId);
 
     }

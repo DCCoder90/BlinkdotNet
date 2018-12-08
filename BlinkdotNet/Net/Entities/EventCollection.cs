@@ -3,7 +3,7 @@ using System.Text;
 
 namespace BlinkdotNet.Net.Entities
 {
-    public class EventCollection
+    internal class EventCollection
     {
         public List<Event> @event { get; set; }
     }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BlinkdotNet.Net.Entities
 {
-    public class CameraDetails
+    internal class CameraDetails
     {
         public Camera camera_status{ get; set; }
     }

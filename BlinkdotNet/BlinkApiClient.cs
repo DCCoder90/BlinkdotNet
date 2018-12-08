@@ -21,14 +21,16 @@ namespace BlinkdotNet
             _client = factory.CreateUsa();
         }
 
-        public async Task<NetworkDetails> GetNetworks()
+        public async Task<IEnumerable<NetworkDetail>> GetNetworks()
         {
-            return await _client.Get<NetworkDetails>("networks");
+            var networks = await _client.Get<NetworkDetails>("networks");
+            return networks.networks;
         }
 
-        public async Task<Syncmodule> GetSyncModule(int networkId)
+        public async Task<Module> GetSyncModule(int networkId)
         {
-            return await _client.Get<Syncmodule>("network/" + networkId.ToString() + "/syncmodules");
+            var module = await _client.Get<Syncmodule>("network/" + networkId.ToString() + "/syncmodules");
+            return module.syncmodule;
         }
 
         public async Task<HomeScreen> GetHomeScreen()
@@ -36,9 +38,10 @@ namespace BlinkdotNet
             return await _client.Get<HomeScreen>("homescreen");
         }
 
-        public async Task<EventCollection> GetEvents(int networkId)
+        public async Task<IEnumerable<Event>> GetEvents(int networkId)
         {
-            return await _client.Get<EventCollection>("events/network/" + networkId.ToString());
+            var events = await _client.Get<EventCollection>("events/network/" + networkId.ToString());
+            return events.@event;
         }
 
         public async Task<CommandInformation> CaptureThumbnail(int networkId, int cameraId)
@@ -53,23 +56,23 @@ namespace BlinkdotNet
                                                          cameraId.ToString() + "/clip");
         }
 
-        public async Task<CameraCollection> GetCameras(int networkId)
+        public async Task<IEnumerable<Camera>> GetCameras(int networkId)
         {
             
-            return await _client.Get<CameraCollection>("network/"+networkId.ToString()+"/cameras");
+            var cameras = await _client.Get<CameraCollection>("network/"+networkId.ToString()+"/cameras");
+            return cameras.devicestatus;
         }
 
-        public async Task<CameraDetails> GetCameraDetails(int networkId, int cameraId)
+        public async Task<Camera> GetCameraById(int networkId, int cameraId)
         {
-            return await _client.Get<CameraDetails>("network/"+networkId.ToString()+"/camera/"+cameraId.ToString());
-
+            var camera = await _client.Get<CameraDetails>("network/"+networkId.ToString()+"/camera/"+cameraId.ToString());
+            return camera.camera_status;
         }
 
         public async Task<SensorInformation> GetCameraSensorDetails(int networkId, int cameraId)
         {
             return await _client.Get<SensorInformation>("network/" + networkId.ToString() + "/camera/" +
                                                     cameraId.ToString() + "/signals");
-
         }
     }
 }

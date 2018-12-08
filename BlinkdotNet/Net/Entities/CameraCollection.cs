@@ -2,7 +2,7 @@
 
 namespace BlinkdotNet.Net.Entities
 {
-    public class CameraCollection
+    internal class CameraCollection
     {
         public List<Camera> devicestatus { get; set; }
     }
