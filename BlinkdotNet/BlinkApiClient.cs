@@ -86,7 +86,7 @@ namespace BlinkdotNet
             return await _client.Get<IEnumerable<VideoInformation>>("videos/page/" + pageNumber.ToString());
         }
 
-        public async Task<IEnumerable<VideoInformation>> GetUnWatchedVideos()
+        public async Task<IEnumerable<VideoInformation>> GetUnwatchedVideos()
         {
             return await _client.Get<IEnumerable<VideoInformation>>("videos/unwatched");
         }
