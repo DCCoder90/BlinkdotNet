@@ -90,5 +90,10 @@ namespace BlinkdotNet
         {
             return await _client.Get<IEnumerable<VideoInformation>>("videos/unwatched");
         }
+
+        public async Task<VideoInformation> GetVideoById(int id)
+        {
+            return await _client.Get<VideoInformation>("video/" + id.ToString());
+        }
     }
 }

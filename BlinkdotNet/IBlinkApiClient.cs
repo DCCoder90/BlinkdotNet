@@ -22,5 +22,6 @@ namespace BlinkdotNet
         Task<int> GetVideoCount();
         Task<IEnumerable<VideoInformation>> GetPagedVideoInfo(int pageNumber = 0);
         Task<IEnumerable<VideoInformation>> GetUnwatchedVideos();
+        Task<VideoInformation> GetVideoById(int id);
     }
 }
