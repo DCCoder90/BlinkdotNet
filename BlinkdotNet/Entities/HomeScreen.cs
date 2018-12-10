@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 
-namespace BlinkdotNet.Net.Entities
+namespace BlinkdotNet.Entities
 {
     public class HomeScreen
     {

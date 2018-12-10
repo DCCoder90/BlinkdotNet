@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using BlinkdotNet.Entities;
 using BlinkdotNet.Net;
 using BlinkdotNet.Net.Entities;
 
@@ -58,7 +59,6 @@ namespace BlinkdotNet
 
         public async Task<IEnumerable<Camera>> GetCameras(int networkId)
         {
-            
             var cameras = await _client.Get<CameraCollection>("network/"+networkId.ToString()+"/cameras");
             return cameras.devicestatus;
         }
@@ -73,6 +73,27 @@ namespace BlinkdotNet
         {
             return await _client.Get<SensorInformation>("network/" + networkId.ToString() + "/camera/" +
                                                     cameraId.ToString() + "/signals");
+        }
+
+        public async Task<int> GetVideoCount()
+        {
+            var count= await _client.Get<IDictionary<string, int>>("videos/count");
+            return count["count"];
+        }
+
+        public async Task<IEnumerable<VideoInformation>> GetPagedVideoInfo(int pageNumber=0)
+        {
+            return await _client.Get<IEnumerable<VideoInformation>>("videos/page/" + pageNumber.ToString());
+        }
+
+        public async Task<IEnumerable<VideoInformation>> GetUnWatchedVideos()
+        {
+            return await _client.Get<IEnumerable<VideoInformation>>("videos/unwatched");
+        }
+
+        public async Task<VideoInformation> GetVideoById(int id)
+        {
+            return await _client.Get<VideoInformation>("video/" + id.ToString());
         }
     }
 }

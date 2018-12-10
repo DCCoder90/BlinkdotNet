@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BlinkdotNet.Net.Entities
+namespace BlinkdotNet.Entities
 {
     public class Device
     {
