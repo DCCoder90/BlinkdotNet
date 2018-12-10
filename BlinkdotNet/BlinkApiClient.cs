@@ -81,6 +81,9 @@ namespace BlinkdotNet
             return count["count"];
         }
 
-
+        public async Task<IEnumerable<VideoInformation>> GetPagedVideoInfo(int pageNumber=0)
+        {
+            return await _client.Get<IEnumerable<VideoInformation>>("videos/page/" + pageNumber.ToString());
+        }
     }
 }

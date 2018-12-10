@@ -9,5 +9,4 @@ namespace BlinkdotNet.Net.Entities
     {
         public Module syncmodule{ get; set; }
     }
-
 }
