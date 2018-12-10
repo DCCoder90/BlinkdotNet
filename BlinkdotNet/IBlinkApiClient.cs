@@ -21,5 +21,6 @@ namespace BlinkdotNet
         Task<SensorInformation> GetCameraSensorDetails(int networkId, int cameraId);
         Task<int> GetVideoCount();
         Task<IEnumerable<VideoInformation>> GetPagedVideoInfo(int pageNumber = 0);
+        Task<IEnumerable<VideoInformation>> GetUnwatchedVideos();
     }
 }
