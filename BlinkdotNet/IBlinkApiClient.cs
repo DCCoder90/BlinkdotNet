@@ -18,6 +18,6 @@ namespace BlinkdotNet
         Task<IEnumerable<Camera>> GetCameras(int networkId);
         Task<Camera> GetCameraById(int networkId, int cameraId);
         Task<SensorInformation> GetCameraSensorDetails(int networkId, int cameraId);
-
+        Task<int> GetVideoCount();
     }
 }

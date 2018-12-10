@@ -58,7 +58,6 @@ namespace BlinkdotNet
 
         public async Task<IEnumerable<Camera>> GetCameras(int networkId)
         {
-            
             var cameras = await _client.Get<CameraCollection>("network/"+networkId.ToString()+"/cameras");
             return cameras.devicestatus;
         }
@@ -73,6 +72,12 @@ namespace BlinkdotNet
         {
             return await _client.Get<SensorInformation>("network/" + networkId.ToString() + "/camera/" +
                                                     cameraId.ToString() + "/signals");
+        }
+
+        public async Task<int> GetVideoCount()
+        {
+            var count= await _client.Get<IDictionary<string, int>>("videos/count");
+            return count["count"];
         }
     }
 }

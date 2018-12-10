@@ -8,9 +8,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blink.Api.Tests", "Blink.Api.Tests\Blink.Api.Tests.csproj", "{C66866D1-A6B2-4592-919C-7D156CF1BD91}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E5B2FD78-DA37-4D10-81B0-0CAA6FE32B93}"
-	ProjectSection(SolutionItems) = preProject
-		build.bat = build.bat
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
