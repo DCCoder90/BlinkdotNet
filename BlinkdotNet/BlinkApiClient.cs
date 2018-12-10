@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using BlinkdotNet.Entities;
 using BlinkdotNet.Net;
 using BlinkdotNet.Net.Entities;
 
@@ -79,5 +80,7 @@ namespace BlinkdotNet
             var count= await _client.Get<IDictionary<string, int>>("videos/count");
             return count["count"];
         }
+
+
     }
 }

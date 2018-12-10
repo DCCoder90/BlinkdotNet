@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using BlinkdotNet.Entities;
 using BlinkdotNet.Net;
 using BlinkdotNet.Net.Entities;
 

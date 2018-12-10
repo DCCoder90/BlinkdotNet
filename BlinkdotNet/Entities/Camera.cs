@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace BlinkdotNet.Net.Entities
+namespace BlinkdotNet.Entities
 {
     public class Camera
     {
