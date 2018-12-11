@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using BlinkdotNet.Entities;
@@ -27,5 +28,6 @@ namespace BlinkdotNet
         Task<string> GetHealth();
         Task<Regions> GetRegionInfo();
         Task<IEnumerable<Client>> GetClients();
+        Task<Stream> GetFile(string fileUri);
     }
 }
