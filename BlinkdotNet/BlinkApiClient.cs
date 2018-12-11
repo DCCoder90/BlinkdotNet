@@ -109,7 +109,7 @@ namespace BlinkdotNet
 
         public async Task<Regions> GetRegionInfo()
         {
-            var result = await _client.Get<RegionInfo>("regions");
+            var result = await _client.Get<RegionInfo<Regions>>("regions");
             return result.regions;
         }
     }
