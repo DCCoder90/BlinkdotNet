@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -116,6 +117,12 @@ namespace BlinkdotNet
         public async Task<IEnumerable<Client>> GetClients()
         {
             return await _client.Get<IEnumerable<Client>>("account/clients");
+        }
+
+        public async Task<Stream> GetFile(string fileUri)
+        {
+            var videoData = await _client.Get<byte[]>(videoUri);
+            return new MemoryStream(videoData);
         }
     }
 }
