@@ -112,5 +112,10 @@ namespace BlinkdotNet
             var result = await _client.Get<RegionInfo<Regions>>("regions");
             return result.regions;
         }
+
+        public async Task<IEnumerable<Client>> GetClients()
+        {
+            return await _client.Get<IEnumerable<Client>>("account/clients");
+        }
     }
 }
