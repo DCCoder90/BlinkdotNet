@@ -25,5 +25,6 @@ namespace BlinkdotNet
         Task<VideoInformation> GetVideoById(int id);
         Task<Programs> GetPrograms(int networkId);
         Task<string> GetHealth();
+        Task<Regions> GetRegionInfo();
     }
 }

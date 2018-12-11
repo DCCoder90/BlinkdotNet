@@ -106,5 +106,11 @@ namespace BlinkdotNet
             var result = await _client.Get<IDictionary<string, string>>("health");
             return result["health"];
         }
+
+        public async Task<Regions> GetRegionInfo()
+        {
+            var result = await _client.Get<RegionInfo>("regions");
+            return result.regions;
+        }
     }
 }
