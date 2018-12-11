@@ -95,5 +95,27 @@ namespace BlinkdotNet
         {
             return await _client.Get<VideoInformation>("video/" + id.ToString());
         }
+
+        public async Task<Programs> GetPrograms(int networkId)
+        {
+            return await _client.Get<Programs>("networks/"+networkId.ToString()+"/programs");
+        }
+
+        public async Task<string> GetHealth()
+        {
+            var result = await _client.Get<IDictionary<string, string>>("health");
+            return result["health"];
+        }
+
+        public async Task<Regions> GetRegionInfo()
+        {
+            var result = await _client.Get<RegionInfo<Regions>>("regions");
+            return result.regions;
+        }
+
+        public async Task<IEnumerable<Client>> GetClients()
+        {
+            return await _client.Get<IEnumerable<Client>>("account/clients");
+        }
     }
 }
