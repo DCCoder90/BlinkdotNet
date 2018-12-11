@@ -121,7 +121,7 @@ namespace BlinkdotNet
 
         public async Task<Stream> GetFile(string fileUri)
         {
-            var videoData = await _client.Get<byte[]>(videoUri);
+            var videoData = await _client.Get<byte[]>(fileUri);
             return new MemoryStream(videoData);
         }
     }
