@@ -1,7 +1,11 @@
-﻿namespace BlinkdotNet.Entities
+﻿using System.Runtime.Serialization;
+
+namespace BlinkdotNet.Entities
 {
+    [DataContract]
     public class Account
     {
-        public int notifications { get; set; }
+        [DataMember(Name = "notifications")]
+        public int Notifications { get; set; }
     }
 }

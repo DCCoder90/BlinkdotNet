@@ -1,14 +1,32 @@
-﻿namespace BlinkdotNet.Entities
+﻿using System.Runtime.Serialization;
+
+namespace BlinkdotNet.Entities
 {
+    [DataContract]
     public class Network
     {
-        public string name { get; set; }
-        public int wifi_strength { get; set; }
-        public string status { get; set; }
-        public bool armed { get; set; }
-        public int notifications { get; set; }
-        public int warning { get; set; }
-        public bool enable_temp_alerts { get; set; }
-        public string error_msg { get; set; }
+        [DataMember(Name ="name")]
+        public string Name { get; set; }
+
+        [DataMember(Name ="wifi_strength")]
+        public int WifiSignal { get; set; }
+
+        [DataMember(Name ="status")]
+        public string Status { get; set; }
+
+        [DataMember(Name ="armed")]
+        public bool IsArmed { get; set; }
+
+        [DataMember(Name ="notifications")]
+        public int Notifications { get; set; }
+
+        [DataMember(Name ="warning")]
+        public int Warning { get; set; }
+
+        [DataMember(Name ="enable_temp_alerts")]
+        public bool IsTempAlertsEnabled { get; set; }
+
+        [DataMember(Name ="error_msg")]
+        public string ErrorMessage { get; set; }
     }
 }

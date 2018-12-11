@@ -1,9 +1,17 @@
-﻿namespace BlinkdotNet.Entities
+﻿using System.Runtime.Serialization;
+
+namespace BlinkdotNet.Entities
 {
+    [DataContract]
     public class Regions
     {
-        public Region us { get; set; }
-        public Region eu { get; set; }
-        public Region sg { get; set; }
+        [DataMember(Name = "us")]
+        public Region Usa { get; set; }
+
+        [DataMember(Name = "eu")]
+        public Region Eu { get; set; }
+
+        [DataMember(Name = "sg")]
+        public Region Sg { get; set; }
     }
 }

@@ -1,15 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace BlinkdotNet.Entities
 {
+    [DataContract]
     public class SensorInformation
     {
+        [DataMember(Name = "lfr")]
         public int lfr { get; set; }
-        public int wifi { get; set; }
-        public DateTime updated_at { get; set; }
-        public int temp { get; set; }
-        public int battery { get; set; }
+
+        [DataMember(Name = "wifi")]
+        public int WifiSignal { get; set; }
+
+        [DataMember(Name = "updated_at")]
+        public DateTime LastUpdate { get; set; }
+
+        [DataMember(Name = "temp")]
+        public int Temperature { get; set; }
+
+        [DataMember(Name = "battery")]
+        public int BatteryLevel { get; set; }
     }
 }
