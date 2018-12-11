@@ -95,5 +95,10 @@ namespace BlinkdotNet
         {
             return await _client.Get<VideoInformation>("video/" + id.ToString());
         }
+
+        public async Task<Programs> GetPrograms(int networkId)
+        {
+            return await _client.Get<Programs>("networks/"+networkId.ToString()+"/programs");
+        }
     }
 }
