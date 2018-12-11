@@ -100,5 +100,11 @@ namespace BlinkdotNet
         {
             return await _client.Get<Programs>("networks/"+networkId.ToString()+"/programs");
         }
+
+        public async Task<string> GetHealth()
+        {
+            var result = await _client.Get<IDictionary<string, string>>("health");
+            return result["health"];
+        }
     }
 }

@@ -24,5 +24,6 @@ namespace BlinkdotNet
         Task<IEnumerable<VideoInformation>> GetUnwatchedVideos();
         Task<VideoInformation> GetVideoById(int id);
         Task<Programs> GetPrograms(int networkId);
+        Task<string> GetHealth();
     }
 }
