@@ -3,8 +3,9 @@ using System.IO;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using BlinkdotNet.Serialization.Interfaces;
 
-namespace BlinkdotNet.Net
+namespace BlinkdotNet.Serialization
 {
     internal class HttpContentSerializer : IHttpContentSerializer
     {

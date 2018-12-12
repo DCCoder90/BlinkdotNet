@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading;
+using BlinkdotNet.Serialization;
+using BlinkdotNet.Serialization.Newtonsoft;
 
 namespace BlinkdotNet.Net
 {
@@ -24,7 +26,7 @@ namespace BlinkdotNet.Net
 
         private IBlinkRestClient CreateUsa(Uri baseUri)
         {
-            var serializer = new HttpContentSerializer(new NewtonSoftJsonSerializer());
+            var serializer = new HttpContentSerializer(NetworksoftSerializerFactory.Create());
 
             var restClient = new RestClient(
                 new RequestFactory(),

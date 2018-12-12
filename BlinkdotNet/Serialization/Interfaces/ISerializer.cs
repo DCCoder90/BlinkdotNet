@@ -2,7 +2,7 @@
 using System.IO;
 using System.Net.Http;
 
-namespace BlinkdotNet.Net
+namespace BlinkdotNet.Serialization.Interfaces
 {
     internal interface ISerializer
     {
