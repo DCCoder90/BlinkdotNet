@@ -2,7 +2,7 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace BlinkdotNet.Net
+namespace BlinkdotNet.Serialization.Interfaces
 {
     internal interface IHttpContentSerializer
     {

@@ -1,11 +1,14 @@
 ﻿using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 using BlinkdotNet.Entities;
 
 namespace BlinkdotNet.Net.Entities
 {
+    [DataContract]
     internal class EventCollection
     {
-        public List<Event> @event { get; set; }
+        [DataMember(Name ="@event")]
+        public List<Event> Events { get; set; }
     }
 }

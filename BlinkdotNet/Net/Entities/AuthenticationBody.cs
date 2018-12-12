@@ -1,20 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace BlinkdotNet.Net.Entities
 {
+    [DataContract]
     internal class AuthenticationBody
     {
-        public string password{ get; set; }
-        public string client_specifier{ get; set; }
-        public string email { get; set; }
+        [DataMember(Name ="password")]
+        public string Password{ get; set; }
+
+        [DataMember(Name ="client_specifier")]
+        public string ClientSpecifier{ get; set; }
+
+        [DataMember(Name ="email")]
+        public string Email { get; set; }
 
         public AuthenticationBody(string username, string pass, string client)
         {
-            password = pass;
-            email = username;
-            client_specifier = client;
+            Password = pass;
+            Email = username;
+            ClientSpecifier = client;
         }
 
     }
