@@ -5,8 +5,10 @@ using BlinkdotNet.Entities;
 
 namespace BlinkdotNet.Net.Entities
 {
+    [DataContract]
     internal class Syncmodule
     {
-        public Module syncmodule{ get; set; }
+        [DataMember(Name ="syncmodule")]
+        public Module Module{ get; set; }
     }
 }

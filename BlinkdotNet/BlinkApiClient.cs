@@ -26,13 +26,13 @@ namespace BlinkdotNet
         public async Task<IEnumerable<NetworkDetail>> GetNetworks()
         {
             var networks = await _client.Get<NetworkDetails>("networks");
-            return networks.networks;
+            return networks.Networks;
         }
 
         public async Task<Module> GetSyncModule(int networkId)
         {
             var module = await _client.Get<Syncmodule>("network/" + networkId.ToString() + "/syncmodules");
-            return module.syncmodule;
+            return module.Module;
         }
 
         public async Task<HomeScreen> GetHomeScreen()
@@ -43,7 +43,7 @@ namespace BlinkdotNet
         public async Task<IEnumerable<Event>> GetEvents(int networkId)
         {
             var events = await _client.Get<EventCollection>("events/network/" + networkId.ToString());
-            return events.@event;
+            return events.Events;
         }
 
         public async Task<CommandInformation> CaptureThumbnail(int networkId, int cameraId)
@@ -61,13 +61,13 @@ namespace BlinkdotNet
         public async Task<IEnumerable<Camera>> GetCameras(int networkId)
         {
             var cameras = await _client.Get<CameraCollection>("network/"+networkId.ToString()+"/cameras");
-            return cameras.devicestatus;
+            return cameras.Cameras;
         }
 
         public async Task<Camera> GetCameraById(int networkId, int cameraId)
         {
             var camera = await _client.Get<CameraDetails>("network/"+networkId.ToString()+"/camera/"+cameraId.ToString());
-            return camera.camera_status;
+            return camera.Camera;
         }
 
         public async Task<SensorInformation> GetCameraSensorDetails(int networkId, int cameraId)
@@ -111,7 +111,7 @@ namespace BlinkdotNet
         public async Task<Regions> GetRegionInfo()
         {
             var result = await _client.Get<RegionInfo<Regions>>("regions");
-            return result.regions;
+            return result.Regions;
         }
 
         public async Task<IEnumerable<Client>> GetClients()

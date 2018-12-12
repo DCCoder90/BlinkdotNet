@@ -1,8 +1,14 @@
-﻿namespace BlinkdotNet.Net.Entities
+﻿using System.Runtime.Serialization;
+
+namespace BlinkdotNet.Net.Entities
 {
+    [DataContract]
     internal class RegionInfo<T>
     {
-        public string preferred { get; set; }
-        public T regions { get; set; }
+        [DataMember(Name ="preferred")]
+        public string Preferred { get; set; }
+
+        [DataMember(Name ="regions")]
+        public T Regions { get; set; }
     }
 }
