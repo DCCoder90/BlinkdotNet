@@ -11,3 +11,11 @@ BlinkdotNet allows developers to interact with Blink networks and cameras easily
 ## Release Notes
 
 Currently BlinkdotNet is in an alpha release state, and is availible through Nuget.org.  To download via Nuget Package Manager ensure that you have "Include Prerelease" checked.
+
+## Documentation
+
+Documentation can be found on the [wiki](https://github.com/DCCoder90/BlinkdotNet/wiki)
+
+## Usage
+
+*To Be Completed*
