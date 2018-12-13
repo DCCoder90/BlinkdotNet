@@ -18,4 +18,21 @@ Documentation can be found on the [wiki](https://github.com/DCCoder90/BlinkdotNe
 
 ## Usage
 
-*To Be Completed*
+### Getting Started
+In order to get started using BlinkdotNet you must first create a new instance of the IBlinkApiClient passing it the login credentials to your [Blink account](https://blinkforhome.com/)
+
+```C#
+IBlinkApiClient client = new BlinkApiClient("exampleeamil@example.com", "mys3cretp@ssword");
+```
+
+Once you have your IBlinkApiClient implementation you simply call it like so:
+
+```C#
+var networks = await client.GetNetworksAsync();
+foreach (var network in networks)
+{
+    Console.WriteLine(network.Name);
+}
+```
+
+It is important to note that all methods implmented by IBlinkApiClient are asynchronous.
