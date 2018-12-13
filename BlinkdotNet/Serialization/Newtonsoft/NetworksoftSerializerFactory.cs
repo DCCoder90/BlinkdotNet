@@ -23,7 +23,8 @@ namespace BlinkdotNet.Serialization.Newtonsoft
                 Culture = CultureInfo.InvariantCulture,
                 Converters = new List<JsonConverter>(){
                     new DoubleConverter(),
-                    new IntegerConverter()
+                    new IntegerConverter(),
+                    new BoolConverter()
                 }
                 
             });
