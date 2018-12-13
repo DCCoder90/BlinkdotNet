@@ -11,23 +11,23 @@ namespace BlinkdotNet
 {
     public interface IBlinkApiClient
     {
-        Task<IEnumerable<NetworkDetail>> GetNetworks();
-        Task<Module> GetSyncModule(int networkId);
-        Task<HomeScreen> GetHomeScreen();
-        Task<IEnumerable<Event>> GetEvents(int networkId);
-        Task<CommandInformation> CaptureThumbnail(int networkId, int cameraId);
-        Task<CommandInformation> CaptureClip(int networkId, int cameraId);
-        Task<IEnumerable<Camera>> GetCameras(int networkId);
-        Task<Camera> GetCameraById(int networkId, int cameraId);
-        Task<SensorInformation> GetCameraSensorDetails(int networkId, int cameraId);
-        Task<int> GetVideoCount();
-        Task<IEnumerable<VideoInformation>> GetPagedVideoInfo(int pageNumber = 0);
-        Task<IEnumerable<VideoInformation>> GetUnwatchedVideos();
-        Task<VideoInformation> GetVideoById(int id);
-        Task<Programs> GetPrograms(int networkId);
-        Task<string> GetHealth();
-        Task<Regions> GetRegionInfo();
-        Task<IEnumerable<Client>> GetClients();
-        Task<Stream> GetFile(string fileUri);
+        Task<IEnumerable<NetworkDetail>> GetNetworksAsync();
+        Task<Module> GetSyncModuleAsync(int networkId);
+        Task<HomeScreen> GetHomeScreenAsync();
+        Task<IEnumerable<Event>> GetEventsAsync(int networkId);
+        Task<CommandInformation> CaptureThumbnailAsync(int networkId, int cameraId);
+        Task<CommandInformation> CaptureClipAsync(int networkId, int cameraId);
+        Task<IEnumerable<Camera>> GetCamerasAsync(int networkId);
+        Task<Camera> GetCameraByIdAsync(int networkId, int cameraId);
+        Task<SensorInformation> GetCameraSensorDetailsAsync(int networkId, int cameraId);
+        Task<int> GetVideoCountAsync();
+        Task<IEnumerable<VideoInformation>> GetPagedVideoInfoAsync(int pageNumber = 0);
+        Task<IEnumerable<VideoInformation>> GetUnwatchedVideosAsync();
+        Task<VideoInformation> GetVideoByIdAsync(int id);
+        Task<Programs> GetProgramsAsync(int networkId);
+        Task<string> GetHealthAsync();
+        Task<Regions> GetRegionInfoAsync();
+        Task<IEnumerable<Client>> GetClientsAsync();
+        Task<Stream> GetFileAsync(string fileUri);
     }
 }
