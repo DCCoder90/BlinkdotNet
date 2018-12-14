@@ -6,7 +6,7 @@ BlinkdotNet allows developers to interact with Blink networks and cameras easily
  
 ## Build Status
 
-[![osnugetfeed MyGet Build Status](https://www.myget.org/BuildSource/Badge/osnugetfeed?identifier=6826aec3-c62d-45d5-8eb8-a56cbe0a1fb4)](https://www.myget.org/)
+[![Build Status](https://dev.azure.com/dccoder/DCCoders/_apis/build/status/BlinkdotNet-CI?branchName=master)](https://dev.azure.com/dccoder/DCCoders/_build/latest?definitionId=3?branchName=master)
 
 ## Release Notes
 
