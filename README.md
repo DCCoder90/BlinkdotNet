@@ -8,6 +8,8 @@ BlinkdotNet allows developers to interact with Blink networks and cameras easily
 
 [![Build Status](https://dev.azure.com/dccoder/DCCoders/_apis/build/status/BlinkdotNet-CI?branchName=master)](https://dev.azure.com/dccoder/DCCoders/_build/latest?definitionId=3?branchName=master)
 
+[![Deployment Status](https://vsrm.dev.azure.com/dccoder/_apis/public/Release/badge/eed6374e-ee58-4c21-8c9a-d479c6d82805/1/1)](https://vsrm.dev.azure.com/dccoder/_apis/public/Release/badge/eed6374e-ee58-4c21-8c9a-d479c6d82805/1/1)
+
 ## Release Notes
 
 Currently BlinkdotNet is in an alpha release state, and is availible through Nuget.org.  To download via Nuget Package Manager ensure that you have "Include Prerelease" checked.
